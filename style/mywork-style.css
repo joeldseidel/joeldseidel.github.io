@@ -1,0 +1,38 @@
+body {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    background-color: #d9d9d9;
+}
+.page-background {
+    padding:5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    box-shadow: 0 0 20px black;
+    border: 1px solid #cccccc;
+    background-color: white;
+}
+.work-section-header{
+    font-weight: 100;
+    font-size: 50px;
+}
+.work-section-text{
+    font-weight: 400;
+    font-size: 17px;
+}
+.card-image{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    height: 150px;
+    width: 240px;
+    margin-bottom: 15px;
+}
+.card-text{
+    font-size: 14px;
+    border-top: 1px solid #cccccc;
+    padding-top: 5px;
+}
+.project-card:hover{
+    cursor: pointer;
+}
+.project-card{
+    box-shadow: 0 0 5px #808080;
+}

@@ -1,5 +1,5 @@
 body {
-	background-image: url('./img/index-background.jpg');
+	background-image: url('../img/index-background.jpg');
 	background-size: 100%, 100%;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
