@@ -7,9 +7,12 @@ body {
 	width:100%;
 	background-color: #000000;
 	color: #ffffff;
-	top: 50%;
+	top: 55%;
 	position: absolute;
 	transform: translate(0, -50%);
+	z-index: -1;
+	padding-top: 10%;
+	box-shadow: 0 0 20px #404040;
 }
 #name-header {
 	font-size: 84px;
@@ -32,4 +35,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+#name-photo{
+	height: 20%;
+	width: 20%;
+	right: 50%;
+	border: 7px solid black;
+}
+#name-image-container{
+	margin-top: 2.5%;
 }
