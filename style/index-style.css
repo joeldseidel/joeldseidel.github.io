@@ -17,12 +17,12 @@ body {
 #name-header {
 	font-size: 84px;
 	font-weight: 100;
-	text-align: center;
+	text-align: left;
 }
 #titles-header {
 	font-size: 28px;
 	font-weight: 100;
-	text-align: center;
+	text-align: left;
 }
 .index-button {
 	padding-top: 5px;
@@ -32,7 +32,12 @@ body {
 }
 #option-group {
 	margin-top: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+}
+#name-photo {
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	border: 10px solid black;
+	transform: translate(0, -50%);
 }
