@@ -1,6 +1,6 @@
 body {
-	background-image: url('../img/index-background.jpg');
-	background-size: 100%, 100%;
+	background: url('../img/index-background.jpg') no-repeat fixed left top;
+	background-size: cover;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 #name-plate-center {
@@ -14,15 +14,16 @@ body {
 	transform: translate(0, -40%);
 	box-shadow: 0 0 20px #404040;
 }
-#name-header {
+.name-header {
 	font-size: 84px;
 	font-weight: 100;
 	text-align: left;
 }
-#titles-header {
-	font-size: 28px;
+.titles-header {
+	font-size: 24px;
 	font-weight: 100;
 	text-align: left;
+	margin-top: 30px;
 }
 .index-button {
 	padding-top: 5px;
@@ -30,14 +31,47 @@ body {
 	font-size: 20px;
 	font-weight: 100;
 }
-#option-group {
+.option-group {
 	margin-top: 30px;
-
 }
-#name-photo {
-	width: 90%;
+.name-photo {
 	position: absolute;
 	top: 50%;
 	border: 10px solid black;
 	transform: translate(0, -50%);
+}
+.fixed-carousel-item {
+	width: 100%;
+}
+.fixed-carousel-item p {
+}
+@media only screen and (min-width: 950px){
+	.show-desktop{
+		display: block;
+	}
+	.show-condensed {
+		display: none;
+	}
+	.show-mobile {
+		display: none;
+	}
+	.option-group{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.name-header{
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 949px){
+	.show-desktop{
+		display: none;
+	}
+	.show-condensed{
+		display: none;
+	}
+	.show-mobile{
+		display: block;
+	}
 }

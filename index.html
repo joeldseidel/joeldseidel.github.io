@@ -11,16 +11,47 @@
 </head>
 <body>
 	<div class="container-fluid jumbotron" id="name-plate-center">
-        <div class="row">
-            <div class="col-4">
-                <img id="name-photo" class="rounded-circle" src="img/me.jpg" alt="Joel Seidel" />
+        <div class="show-desktop">
+            <div class="row">
+                <div>
+                    <img class="name-photo rounded-circle" src="img/me.jpg" alt="Joel Seidel" />
+                </div>
+                <div class="text-column">
+                    <h1 class="name-header">Joel Seidel</h1>
+                    <h3 class="titles-header">Software developer &nbsp;•&nbsp; Student &nbsp;•&nbsp; Entrepreneur</h3>
+                    <div class="option-group btn-group">
+                        <button type="button" class="btn btn-outline-light text-light index-button work-button">View my work</button>
+                        <button type="button" class="btn btn-outline-light text-light index-button me-button">Learn about me</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-8">
-                <h1 id="name-header">Joel Seidel</h1>
-                <h3 id="titles-header">Software developer &nbsp;•&nbsp;  Economics student &nbsp;•&nbsp; Entrepreneur</h3>
-                <div id="option-group" class="btn-group">
-                    <button type="button" class="btn btn-outline-light text-light index-button" id="work-button">View my work</button>
-                    <button type="button" class="btn btn-outline-light text-light index-button" id="me-button">Learn about me</button>
+        </div>
+        <div class="show-mobile">
+            <div class="row">
+                <img class="name-photo rounded-circle" src="img/me.jpg" alt="Joel Seidel" />
+                <div class="text-column">
+                    <h1 class="name-header">Joel Seidel</h1>
+                    <div id="mobile-carousel-content" class="condensed-titles carousel slide bg-chrome" data-ride="carousel">
+                        <div class="carousel-inner text-white" role="listbox">
+                            <div class="fixed-carousel-item carousel-item active text-center p-2">
+                                <p class="titles-header">Software Developer</p>
+                            </div>
+                            <div class="fixed-carousel-item carousel-item text-center p-2">
+                                <p class="titles-header">Economics Student</p>
+                            </div>
+                            <div class="fixed-carousel-item carousel-item text-center p-2">
+                                <p class="titles-header">Entrepreneur</p>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#mobile-carousel-content" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#mobile-carousel-content" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style/mywork-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -99,6 +100,76 @@
                             <p class="card-text">I am currently working on this project. The team is developing a decentralized social media platform which allows for anonymity and privacy is posting to friends</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="work-section">
+            <h1 class="work-section-header">My Skills</h1><hr/>
+            <h3 class="work-section-subheader">Programming languages:</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item skill-listing" data-skill="csharp">C#</li>
+                <li class="list-inline-item skill-listing" data-skill="cpp">C/C++</li>
+                <li class="list-inline-item skill-listing" data-skill="java">Java</li>
+                <li class="list-inline-item skill-listing" data-skill="php">PHP</li>
+                <li class="list-inline-item skill-listing" data-skill="html5">HTML5 / CSS3</li>
+                <li class="list-inline-item skill-listing" data-skill="javascript">JavaScript</li>
+            </ul>
+            <h3 class="work-section-subheader">Operating Systems:</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item skill-listing" data-skill="windows">Microsoft Windows</li>
+                <li class="list-inline-item skill-listing" data-skill="linux">Linux OS (Arch, Archbang)</li>
+                <li class="list-inline-item skill-listing" data-skill="android">Android</li>
+            </ul>
+            <h3 class="work-section-subheader">Database Systems:</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item skill-listing" data-skill="mysql">MySQL/MariaDB</li>
+                <li class="list-inline-item skill-listing" data-skill="sqlite">SQLite</li>
+                <li class="list-inline-item skill-listing" data-skill="sqlserver">Microsoft SQL Server</li>
+            </ul>
+            <h3 class="work-section-subheader">Project Management:</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item skill-listing" data-skill="slack">Slack</li>
+                <li class="list-inline-item skill-listing" data-skill="jira">Jira / Atlassian</li>
+                <li class="list-inline-item skill-listing" data-skill="git">Github / Git</li>
+                <li class="list-inline-item skill-listing" data-skill="visio">Microsoft Visio</li>
+                <li class="list-inline-item skill-listing" data-skill="gsuite">G Suite Administration</li>
+                <li class="list-inline-item skill-listing" data-skill="office">Microsoft Office</li>
+                <li class="list-inline-item skill-listing" data-skill="azure">Microsoft Azure</li>
+            </ul>
+        </div>
+    </div>
+    <div id="skill_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="skill_name_label"></h1>
+                    <h6 class="modal-title" id="skill_type_label"></h6>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="skill_rating">
+                        <h5 id="skill_rating_label">Skill Level:</h5>
+                        <span id="skill_star_1" class="fa fa-star skill_star"></span>
+                        <span id="skill_star_2" class="fa fa-star skill_star"></span>
+                        <span id="skill_star_3" class="fa fa-star skill_star"></span>
+                        <span id="skill_star_4" class="fa fa-star skill_star"></span>
+                        <span id="skill_star_5" class="fa fa-star skill_star"></span>
+                    </div>
+                    <div id="skill_overview_section">
+                        <h5 id="skill_overview_header">Overview:</h5>
+                        <p id="skill_overview"></p>
+                    </div>
+                    <div id="skill_implementation_section">
+                        <h5 id="skill_implementation_header"></h5>
+                        <ul id="skill_implementation_list"></ul>
+                    </div>
+                    <div id="skill_project_section">
+                        <h5 id="skill_project_header"></h5>
+                        <ul id="skill_project_list"></ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
