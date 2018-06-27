@@ -5,7 +5,7 @@ $(document).ready(function(){
     namePlate = $('#name-plate-center');
     setImageHeight(image, namePlate);
     setTextMargin(image, namePlate);
-    $('#work-button').click(function(){
+    $('.work-button').click(function(){
         window.location.href = "mywork.html";
     });
 });
