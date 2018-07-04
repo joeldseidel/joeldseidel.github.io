@@ -6,7 +6,7 @@ body {
 #name-plate-center {
 	width:100%;
 	left: 0;
-	background-color: #000000;
+	background: rgba(0,0,0,0.75);
 	color: #ffffff;
 	top: 50%;
 	position: absolute;
@@ -14,6 +14,7 @@ body {
 	transform: translate(0, -40%);
 	box-shadow: 0 0 20px #404040;
 }
+
 .name-header {
 	font-size: 84px;
 	font-weight: 100;
@@ -24,6 +25,7 @@ body {
 	font-weight: 100;
 	text-align: left;
 	margin-top: 30px;
+	white-space: nowrap;
 }
 .index-button {
 	padding-top: 5px;
@@ -36,42 +38,29 @@ body {
 }
 .name-photo {
 	position: absolute;
+	width: 444px;
 	top: 50%;
-	border: 10px solid black;
+	border: 10px solid rgba(0,0,0,0.5);
 	transform: translate(0, -50%);
 }
-.fixed-carousel-item {
-	width: 100%;
+#photo-col {
+	padding-right: 10%;
 }
-.fixed-carousel-item p {
+#words-col {
+	padding-left: 25%;
 }
-@media only screen and (min-width: 950px){
-	.show-desktop{
-		display: block;
-	}
-	.show-condensed {
+@media only screen and (max-width: 992px){
+	.name-photo{
 		display: none;
 	}
-	.show-mobile {
-		display: none;
-	}
-	.option-group{
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	#words-col{
+		padding-left: 0;
+		text-align: center;
 	}
 	.name-header{
 		text-align: center;
 	}
-}
-@media only screen and (max-width: 949px){
-	.show-desktop{
-		display: none;
-	}
-	.show-condensed{
-		display: none;
-	}
-	.show-mobile{
-		display: block;
+	.titles-header{
+		text-align: center;
 	}
 }

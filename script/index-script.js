@@ -11,8 +11,13 @@ $(document).ready(function(){
 });
 
 $(window).resize(function(){
-    setImageHeight();
-    setTextMargin();
+    if(window.matchMedia('(max-width: 576px)').matches) {
+        setImageHeight();
+        setTextMargin();
+    } else {
+        //setImageHeight();
+        setTextMargin();
+    }
 });
 
 function setImageHeight(){
