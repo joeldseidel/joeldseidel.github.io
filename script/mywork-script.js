@@ -9,7 +9,7 @@ $(document).ready(function(){
     skillListing.hover(function(event){
         var thisSkillListing = $(event.target);
         thisSkillListing.stop().animate({
-            zoom: 1.5
+            zoom: 1.25
         });
         thisSkillListing.css("cursor", "pointer");
     }, function(event){
