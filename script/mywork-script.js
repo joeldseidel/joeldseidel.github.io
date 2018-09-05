@@ -91,6 +91,11 @@ $(document).ready(function(){
                 thisSkill.overview = "I have used the Android OS for several years and have developed applications for use on the Android system. I am familiar with the Android Studio IDE as well as the now obsolete Eclipse with ADT IDE. I am skilled in setting up Android Virtual Devices and debugging on devices as well as across several SDK versions. I have significant experience in Android GUI development and an understanding of the application organization and design standards";
                 thisSkill.implementations = ["Make use of the operating system for both general and advanced applications", "Develop applications for use on Android", "Use cross-platform debugging tools via Android Studio and the Google developer tools", "Troubleshoot the Android system and solve a variety of technical issues"];
                 break;
+            case "mysql":
+                thisSkill.skillType = "Database";
+                thisSkill.name = "MySQL";
+                thisSkill.rating = 4;
+                thisSkill.overview = "";
             default:
                 alert("I'm sorry :(\nI'm still working on this. Try again tomorrow. My daily updates usually come out around 11PM");
         }

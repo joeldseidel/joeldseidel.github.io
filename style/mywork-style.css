@@ -13,6 +13,13 @@ body {
 .work-section-header{
     font-weight: 100;
     font-size: 50px;
+    text-align: center;
+}
+.work-section-subheader{
+    text-align: center;
+}
+.skill-list{
+    text-align: center;
 }
 .work-section-text{
     font-weight: 400;
@@ -49,7 +56,7 @@ body {
     }
 }
 hr{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .skill-listing{
@@ -76,4 +83,7 @@ hr{
 #skill_name_label{
     display: inline-block;
     margin-right: 5%;
+}
+#skill-subheader{
+    margin-bottom: 2%;
 }
