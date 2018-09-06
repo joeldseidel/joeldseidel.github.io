@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    $('.section-link').click(function(e){
+        e.preventDefault()
+        var sectionTo = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(sectionTo).offset().top - 100
+        }, 1000);
+    });
     var projectCard = $('.project-card');
     projectCard.hover(function(event){
         $(event.target).closest("div.card").css('box-shadow', '0 0 20px #808080');
@@ -96,8 +103,10 @@ $(document).ready(function(){
                 thisSkill.name = "MySQL";
                 thisSkill.rating = 4;
                 thisSkill.overview = "";
+                break;
             default:
-                alert("I'm sorry :(\nI'm still working on this. Try again tomorrow. My daily updates usually come out around 11PM");
+                alert("yeet");
+                break;
         }
         showSkillModal(thisSkill);
         $('#skill_modal').modal();
