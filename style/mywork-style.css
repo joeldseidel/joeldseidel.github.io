@@ -87,3 +87,9 @@ hr{
 #skill-subheader{
     margin-bottom: 2%;
 }
+.carousel-item img{
+    width:100%;
+}
+.carousel-inner{
+    height:500px;
+}

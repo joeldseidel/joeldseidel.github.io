@@ -10,9 +10,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="script/mywork-script.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="10" >
+<body data-spy="scroll" data-target=".navbar" data-offset="100" >
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a  class="nav-link" href="index.html">Home</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#overview">Overview</a>
             </li>
@@ -44,7 +47,7 @@
         </div>
         <div id="myskills" class="work-section">
             <h1 class="work-section-header">My Skills</h1><hr/>
-            <h5 class="work-section-subheader" id="skill-subheader">Click on a skill name to view details on how I would rate my skill level, what I've done with it, and relevant project examples</h5>
+            <h5 class="work-section-subheader" id="skill-subheader">Click on a skill name to view details on how I would rate my skill level, what I've done with it, and relevant project descriptions</h5>
             <div class="container">
                 <h3 class="work-section-subheader">Programming languages:</h3>
                     <ul class="list-inline skill-list">
@@ -79,7 +82,37 @@
                     </ul>
                 </div>
         </div>
-        <div id="myawards"></div>
+        <div id="myawards" class="work-section">
+            <h1 class="work-section-header">My Awards and Recognition</h1><hr/>
+            <div class="container">
+                <div id="awards-carousel" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#awards-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#awards-carousel" data-slide-to="1"></li>
+                        <li data-target="#awards-carousel" data-slide-to="2"></li>
+                        <li data-target="#awards-carousel" data-slide-to="3"></li>
+                        <li data-target="#awards-carousel" data-slide-to="4"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/psupres.jpg" alt="Recognition by Penn State president Erik Barron for Maverick Supply Chain Management System development"/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/tsasoftware.jpg" alt="National award for software development at the 2017 Technology Student Association National Conference"/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/psusupplychain.jpg" alt="Smeal College of Business Supply Chain competition finalist and award winner for the development of Maverick Supply Chain Management System"/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/psuspeech.jpg" alt="Recognition at Penn State Start-up Week for leadership and development of Maverick Systems">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/tsaweb.jpg" alt="National finalist in website design at the 2017 Technology Student Association National Conference"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="myprojects" class="work-section">
             <h1 class="work-section-header">My Projects</h1><hr>
             <div class="row">
