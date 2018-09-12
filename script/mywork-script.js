@@ -67,7 +67,7 @@ $(document).ready(function(){
                 thisSkill.rating = 3;
                 thisSkill.overview = "I have used HTML5/CSS3 for web interface design for several years. As part of my work with HMTL5, I have extensive experience with the Bootstrap framework. By using Bootstrap and CSS, I have created dynamic, mobile-friendly webpages with both static and data-driven content. I have tied my work with HTML5 with my work in PHP via AJAX calls and have worked extensively with delivering and formatting data from an external data system. I have also used HTML5 in connection with XSLT to create data-driven, structured reports.";
                 thisSkill.implementations = ["Create a user-centered GUI experience following common design standards", "Structure and display data in tables and in custom controls", "Implement modular design and use the proper HTML5 semantics in web design", "Create responsive and mobile friendly web applications", "Implement the bootstrap framework"];
-                thisSkill.projects = [{name: "Maverick Supply Chain Management System Client", description: "The client for the Maverick SCMS application was written in HTML5/CSS3 and utilized the Bootstrap libraries. This application is responsive, mobile-friendly, and backwards compatible to IE8", link:""}, {name: "Maverick Systems Website", description:"The Maverick Systems website was created for Maverick Systems LLC upon its founding and is responsive and mobile-friendly. The website took advantage of the Bootstrap library", link:"mavericksystems.us"}, {name:"joelseidel.com", description:"This website was created using HTML5/CSS3. As with my other projects, it also makes use of the Bootstrap library", link:"joelseidel.com"}];
+                thisSkill.projects = [{name: "Maverick Supply Chain Management System Client", description: "The client for the Maverick SCMS application was written in HTML5/CSS3 and utilized the Bootstrap libraries. This application is responsive, mobile-friendly, and backwards compatible to IE8", link:""}, {name: "Maverick Systems Website", description:"The Maverick Systems website was created for Maverick Systems LLC upon its founding and is responsive and mobile-friendly. The website took advantage of the Bootstrap library. NOTE: Our team is currently working on this website and it may not be up for viewing at the time of viewing", link:"https://www.mavericksystems.us"}, {name:"joelseidel.com", description:"This website was created using HTML5/CSS3. As with my other projects, it also makes use of the Bootstrap library", link:"http://www.joelseidel.com"}];
                 break;
             case "javascript":
                 thisSkill.skillType = "Programming Language";
@@ -75,7 +75,7 @@ $(document).ready(function(){
                 thisSkill.rating = 3;
                 thisSkill.overview = "I have used JavaScript in connection with web applications, in Node.JS applications, and for Windows Metro app development. In web development, I have used JS and the jQuery library extensively for to create dynamic content as well as tying in AJAX for PHP/data interactions. In Node.JS, I worked as part of the team that developed a multi-user online collaboration tool making use of a Node.JS server and the canvas tools of JS and HTML. Though now obsolete, I also used JavaScript for Windows Metro application development along with HTML for the application front-end development. In this regard, I am also familiar with application uses of JavaScript on platforms such as Apache Cordova and Windows Universal Apps.";
                 thisSkill.implementations = ["Supplement front-end HTML/CSS with dynamic events and content", "Deliver content via AJAX queries to REST APIs", "Build the function which delivers this content via a modal form", "Implement the jQuery library in web pages"];
-                thisSkill.rojects = [{name: "Maverick Supply Chain Management System Client", description: "The client for the Maverick SCMS application uses the jQuery JS library for handling events and certain display animations and adjustments. The system also interacts with the jQuery that is part of the Bootstrap libraries also implemented in the application", link:""}, {name:"Maverick Systems Website", description: "The Maverick Systems website uses the jQuery JS library for handling events and displaying certain content", link:"mavericksystems.us"}, {name:"joelseidel.com", description:"This website uses JavaScript/jQuery to handle events and animations. It is also how the content of this modal dialog is being shown to you right now"}];
+                thisSkill.projects = [{name: "Maverick Supply Chain Management System Client", description: "The client for the Maverick SCMS application uses the jQuery JS library for handling events and certain display animations and adjustments. The system also interacts with the jQuery that is part of the Bootstrap libraries also implemented in the application", link:""}, {name:"Maverick Systems Website", description: "The Maverick Systems website uses the jQuery JS library for handling events and displaying certain content", link:"mavericksystems.us"}, {name:"joelseidel.com", description:"This website uses JavaScript/jQuery to handle events and animations. It is also how the content of this modal dialog is being shown to you right now"}];
                 break;
             case "windows":
                 thisSkill.skillType = "Operating System";
@@ -102,7 +102,57 @@ $(document).ready(function(){
                 thisSkill.skillType = "Database";
                 thisSkill.name = "MySQL";
                 thisSkill.rating = 4;
-                thisSkill.overview = "";
+                thisSkill.overview = "I have used MySQL across several platforms and via several languages for large and robust data storage. I am skilled with using the JDBC, .NET, and PHP connection libraries and connectors along with the MySQL system. I am also skilled with MySQL administration via the command line interface on both Windows and Linux. I also have significant experience in using the MySQL Workbench application for Windows to manipulate databases as well as import and export data between local and cloud based MySQL databases";
+                thisSkill.implementations = ["Make use of the database system for both simple and complex data storage", "Normalize and develop scalable and organized database structures", "Make use of built in and custom database functions", "Write concise and efficient SQL commands to run simple and complex queries and non-queries", "Develop client and web program interfaces for interacting with application data stored in multiple tables and databases"];
+                break;
+            case "sqlite":
+                thisSkill.skillType = "Database";
+                thisSkill.name = "SQLite";
+                thisSkill.rating = 4;
+                thisSkill.overview = "I have used SQLite across several platforms and via several languages for local, robust data storage for user and application data. I am skilled in using the JDBC and .NET connection libraries along with the SQLite system. I am also skilled with SQLite administration via the command line interface on both Windows and Linux. I also have significant experience in using GUI based workbench applications for working with database schema in SQLite";
+                thisSkill.implementations = ["Make use of the database system for both simple and complex data storage", "Normalize and develop scalable and organized database structures", "Make use of built in and custom database functions", "Write concise and efficient SQL commands to run simple and complex queries and non-queries", "Develop client program interfaces for interaction with application data stored in multiple tables and databases", "Work with the Android operating system interface for using SQLite for internal app data storage"];
+                break;
+            case "sqlserver":
+                thisSkill.skillType = "Database";
+                thisSkill.name = "Microsoft SQL Server";
+                thisSkill.rating = 2;
+                thisSkill.overview = "My experience with Microsoft SQL Servers comes mostly from using Microsoft Azure as a host for several projects. While I am most familiar with writing SQL towards a MySQL or SQLite database, the project I worked on in SQL Server was fairly extensive and required several tables across two databases. I am also familiar with connecting to a SQL Server database from both client and web interfaces both directly and via Microsoft Azure libraries";
+                thisSkill.implementations = ["Make use of the database system for both simple and complex data storage", "Normalize and develop scalable and organized database structures", "Make use of built in and custom database functions", "Write concise and efficient SQL commands to run simple and complex queries and non-queries", "Develop client program interfaces for interaction with application data stored in multiple tables and databases"];
+                break;
+            case "jira":
+                thisSkill.skillType = "Project Mgmt.";
+                thisSkill.name = "Jira/Atlassian";
+                thisSkill.rating = 5;
+                thisSkill.overview = "As part of my project management experience, I have employed Atlassian's Jira software to manage workload and implement Agile development procedures. I have used Jira for sprint planning, task assignment and management, productivity reports, release and issue management, and backlog maintenance. In addition to Jira, I have also used Atlassian's Confluence for extensive documentation to maintain meeting notes, have unified software development documentation, and document issues and version actions.";
+                thisSkill.implementations = ["Employ agile development strategies for software development teams", "Plan and administer sprints with Jira", "Reflect on and refine workload assignments with Jira", "Assign work and maintain story and task backlog with Jira", "Version and issue control with Jira", "Unified documentation with Confluence", "Maintain comprehensive meeting notes with Confluence"];
+                break;
+            case "git":
+                thisSkill.skillType = "Project Mgmt.";
+                thisSkill.name = "Git";
+                thisSkill.rating = 3;
+                thisSkill.overview = "As part of my project management experience, I have employed Github and GitFlow for team development and version control. I have used Github repositories to host projects as well as several branches for development and pull requests to facilitate version deployment to a production environment. By using these tools, my team has been able to implement team programming and code reviews via pull requests. My team has also made use of issue and bug tracking via the Github system. I am familiar mostly with the Github desktop applciation, though I have used the command line interface a few times in the past.";
+                thisSkill.implementations = ["Employ agile development strategies for software development teams", "Manage large code repositories with several contributors", "Utilize branches and pull requests to facilitate version control and feature deployment", "Utilize pull requests and bug reporting features to implement pair programming and code reviews among my team"];
+                break;
+            case "gsuite":
+                thisSkill.skillType = "Project Mgmt.";
+                thisSkill.name = "G Suite";
+                thisSkill.rating = 4;
+                thisSkill.overview = "As part of my project management experience, I have implemented G Suite for email and cloud application platforms for my team members. I am skilled with managing accounts, creating and deleting users, managing account data and security policies, and cloud application support. I have tied G Suite together with our company's domain and routed the services through our systems. I am skilled with the usage of G Suite as well and continue to use the document and presentation software for team tasks.";
+                thisSkill.implementations = ["Set up and route G Suite services through a custom domain", "Work as a system administrator for user accounts", "Manage user accounts and security policies"];
+                break;
+            case "azure":
+                thisSkill.skillType = "Project Mgmt.";
+                thisSkill.name = "Microsoft Azure";
+                thisSkill.rating = 3;
+                thisSkill.overview = "I have worked with Microsoft Azure as a web service provider, making use of the virtual server capabilities for web hosting, SQL server hosting, and mobile application services such as push notifications and cloud backups. I have interacted with Azure across desktop, mobile, and web platforms and used both Microsoft APIs and direct connections to provided services. I also have maintained and administered security policies via Azure for services.";
+                thisSkill.implementations = ["Set up and route Azure services through a custom domain", "Create service instances for web hosting, mobile application servers, and database services", "Implement Microsoft APIS across several platforms to interact with services"];
+                break;
+            case "aws":
+                thisSkill.skillType = "Project Mgmt.";
+                thisSkill.name = "Amazon Web Services";
+                thisSkill.rating = 3;
+                thisSkill.overview = "I am currently working with and learning more about AWS as part of my work at Maverick Systems. I have made use of AWS EC2 for a virtual Amazon Linux machine on which I have set up the LAMP stack as well as implemented our REST API for interactions with the application we are hosting on the instance and the database also being hosted on the instance. I have also set up and administered security policies to allow for development and controlled access";
+                thisSkill.implementations = ["Set up and route AWS services through a custom domain", "Create service instances for web hosting and database services"];
                 break;
             default:
                 alert("yeet");
@@ -154,7 +204,7 @@ $(document).ready(function(){
             if(thisProject.link === ""){
                 projectDisplay = "<li><h6>" + thisProject.name + "</h6><p>" + thisProject.description + "</p></li>";
             } else {
-                projectDisplay = "<li><h6>" + thisProject.name + "</h6><p>" + thisProject.description + "</p><p>Link: <a href='" + thisProject.link + "'></a></p></li>";
+                projectDisplay = "<li><h6>" + thisProject.name + "</h6><p>" + thisProject.description + "</p><a href='" + thisProject.link + "'>Link</a></li><br>";
             }
             $('#skill_project_list').append(projectDisplay);
         });
