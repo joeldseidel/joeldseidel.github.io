@@ -1,5 +1,5 @@
 body {
-	background: url('../img/index-background.jpg') no-repeat fixed left top;
+	background: url('../img/index-background.jpg')fixed left top;
 	background-size: cover;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
@@ -18,14 +18,13 @@ body {
 .name-header {
 	font-size: 84px;
 	font-weight: 100;
-	text-align: left;
+	text-align: center;
 }
 .titles-header {
 	font-size: 24px;
 	font-weight: 100;
-	text-align: left;
+	text-align: center;
 	margin-top: 30px;
-	white-space: nowrap;
 }
 .index-button {
 	padding-top: 5px;
@@ -38,7 +37,8 @@ body {
 }
 .name-photo {
 	position: absolute;
-	width: 444px;
+	min-width: 444px;
+	width: 100%;
 	top: 50%;
 	border: 10px solid rgba(0,0,0,0.5);
 	transform: translate(0, -50%);
@@ -47,9 +47,9 @@ body {
 	padding-right: 10%;
 }
 #words-col {
-	padding-left: 25%;
+	padding-left: 10%;
 }
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 1085px){
 	.name-photo{
 		display: none;
 	}
@@ -63,4 +63,7 @@ body {
 	.titles-header{
 		text-align: center;
 	}
+}
+#work-button{
+	margin-top: 30px;
 }
