@@ -76,6 +76,7 @@ body {
     }
     #awards-carousel{
         background-color: black;
+        height: 500px !important;
     }
 }
 hr{
