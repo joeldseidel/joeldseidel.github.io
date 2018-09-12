@@ -1,9 +1,10 @@
 body {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     background-color: #d9d9d9;
+    width:100%;
 }
 .page-background {
-    padding:5%;
+    padding-top: 55px;
     margin-right: 10%;
     margin-left: 10%;
     box-shadow: 0 0 20px black;
@@ -17,6 +18,8 @@ body {
 }
 .work-section-subheader{
     text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .skill-list{
     text-align: center;
@@ -26,6 +29,8 @@ body {
 .work-section-text{
     font-weight: 400;
     font-size: 17px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .card-image{
     border: 1px solid #999999;
@@ -50,13 +55,27 @@ body {
 }
 .work-section{
     padding-bottom: 5%;
-    margin-bottom: 2%;
+    margin-bottom: 10px;
     border-bottom: 2px solid #808080
 }
-@media (max-width: 992px){
+@media only screen and (max-width: 1200px){
     .page-background {
         margin-left: 0;
         margin-right: 0;
+        width: 100%;
+    }
+    body{
+        width:100%;
+    }
+}
+@media only screen and (max-width: 992px){
+    .carousel-item img{
+        width:100%;
+        height:100%;
+        object-fit: scale-down !important;
+    }
+    #awards-carousel{
+        background-color: black;
     }
 }
 hr{
@@ -93,14 +112,18 @@ hr{
 }
 .carousel-item img{
     width:100%;
-    height:500px;
+    height:100%;
     object-fit:cover;
 }
+.carousel-item{
+    height:100%;
+}
 .carousel-inner{
-    height:500px;
+    height:100%;
 }
 #awards-carousel{
-    height:500px;
+    height:750px;
+    margin-bottom: 10px;
 }
 .carousel-caption{
     background-color: rgba(0,0,0,0.75);
