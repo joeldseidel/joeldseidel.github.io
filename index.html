@@ -4,6 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/index-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -13,18 +15,37 @@
         <div class="row h-100">
             <div class="col-lg-4 p-0 m-0 h-100 index-column">
                 <div class="container h-100" id="my-info-container">
-                    <h1 id="name-label">Joel Seidel</h1>
+                    <h1 id="name-label">Hi, I'm Joel Seidel</h1>
                 </div>
             </div>
-            <div class="col-lg-4 p-0 m-0 h-100 index-column">
-                <!--<img class="w-100" style="" src="./img/index-middle-image.JPG"/>-->
+            <div class="col-lg-5 p-0 m-0 h-100 index-column">
+                <div id="social-media" class="row w-100 justify-content-center align-items-center">
+                    <div class id="social-media-icons">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/joel-seidel-258465164" class="fa fa-linkedin"></a></li>
+                            <li class="list-inline-item"><a target="_blank" href="http://github.com/joeldseidel" class="fa fa-github"></a></li>
+                            <li class="list-inline-item"><a target="_blank" href="https://twitter.com/joelseidel35" class="fa fa-twitter"></a></li>
+                            <li class="list-inline-item"><a target="_blank" href="https://www.instagram.com/seidel_joel/" class="fa fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 p-0 m-0 index-column">
-                <ul class="h-100" id="subtitle-list">
-                    <li>Software Developer</li>
-                    <li>Economist</li>
-                    <li>Entrepreneur</li>
-                </ul>
+            <div class="col-lg-3 pl-10 m-0 index-column" id="titles-column">
+                <div class="row title-container">
+                    <i class="material-icons title-icon">important_devices</i>
+                    <h3>Software Developer</h3>
+                    <button type="button" id="view-work-button" class="btn btn-outline-light">View my work</button>
+                </div>
+                <div class="row title-container">
+                    <i class="material-icons title-icon">attach_money</i>
+                    <h3>Economist</h3>
+                    <p>I'm Ben Bernanke's biggest fan</p>
+                </div>
+                <div class="row title-container">
+                    <i class="material-icons title-icon">business_center</i>
+                    <h3>Entrepreneur</h3>
+                    <p>I own a company, odds are you don't</p>
+                </div>
             </div>
         </div>
     </div>
