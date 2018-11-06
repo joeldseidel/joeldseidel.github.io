@@ -29,7 +29,7 @@ body {
 	text-align: left;
 }
 
-#view-work-button{
+#software-work-button{
 	font-size: 1vw;
 	font-family: 'Raleway', sans-serif;
 }
@@ -40,7 +40,7 @@ body {
 
 .title-container{
 	display:block;
-	padding: 10px 20px;
+	padding: 30px 20px;
 	text-align: center;
 	height: 33%;
 	font-family: 'Raleway', sans-serif;
@@ -51,7 +51,7 @@ body {
 }
 
 .title-icon{
-	font-size: 5vw !important;
+	font-size: 4vw !important;
 	padding: 20px;
 	background-color: white;
 	border-radius: 50%;
