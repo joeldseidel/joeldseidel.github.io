@@ -7,30 +7,26 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="script/index-script.js"></script>
 </head>
 <body>
-	<div class="container-fluid jumbotron" id="name-plate-center">
-        <div class="show-desktop">
-            <div class="row">
-                <div class="col-lg-4" id="photo-col">
-                    <img class="name-photo rounded-circle" src="img/me.jpg" alt="Joel Seidel" />
-                </div>
-                <div class="col-lg-8">
-                    <div class="text-column container" id="words-col">
-                        <h1 class="name-header">Joel Seidel</h1>
-                        <ol class="list-inline titles-header">
-                            <li class="list-inline-item">Software developer &nbsp;</li>
-                            <li class="list-inline-item">&nbsp; Economist &nbsp;</li>
-                            <li class="list-inline-item">&nbsp; Entrepreneur</li>
-                        </ol>
-                        <div id="work-button" class="row  h-100 justify-content-center align-items-center">
-                            <a role="button" class="btn btn-outline-light btn-lg" href="mywork.html">View My Work</a>
-                        </div>
-                    </div>
+    <div class="container-fluid h-100 pl-0" id="index-container">
+        <div class="row h-100">
+            <div class="col-lg-4 p-0 m-0 h-100 index-column">
+                <div class="container h-100" id="my-info-container">
+                    <h1 id="name-label">Joel Seidel</h1>
                 </div>
             </div>
+            <div class="col-lg-4 p-0 m-0 h-100 index-column">
+                <!--<img class="w-100" style="" src="./img/index-middle-image.JPG"/>-->
+            </div>
+            <div class="col-lg-4 p-0 m-0 index-column">
+                <ul class="h-100" id="subtitle-list">
+                    <li>Software Developer</li>
+                    <li>Economist</li>
+                    <li>Entrepreneur</li>
+                </ul>
+            </div>
         </div>
-	</div>
+    </div>
 </body>
 </html>

@@ -1,69 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+html{
+	height:100%;
+}
 body {
-	background: url('../img/index-background.jpg')fixed left top;
+	background-image: url("../img/index-background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-}
-#name-plate-center {
-	width:100%;
-	left: 0;
-	background: rgba(0,0,0,0.75);
-	color: #ffffff;
-	top: 50%;
-	position: absolute;
-	z-index: -1;
-	transform: translate(0, -40%);
-	box-shadow: 0 0 20px #404040;
+	height: 100%;
+	overflow: hidden;
 }
 
-.name-header {
-	font-size: 84px;
-	font-weight: 100;
-	text-align: center;
+.index-column{
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
 }
-.titles-header {
-	font-size: 24px;
-	font-weight: 100;
-	text-align: center;
-	margin-top: 30px;
+
+#my-info-container{
+	background: rgba(0,0,0,0.8);
+	padding-left: 30px;
 }
-.index-button {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 20px;
-	font-weight: 100;
+
+#name-label{
+	color: white;
+	font-size: 10vw;
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
 }
-.option-group {
-	margin-top: 30px;
+
+#subtitle-list{
+	list-style-type: none;
+	background: rgba(0,0,0,0.8);
 }
-.name-photo {
-	position: absolute;
-	min-width: 444px;
-	width: 100%;
-	top: 50%;
-	border: 10px solid rgba(0,0,0,0.5);
-	transform: translate(0, -50%);
-}
-#photo-col {
-	padding-right: 10%;
-}
-#words-col {
-	padding-left: 10%;
-}
-@media only screen and (max-width: 1085px){
-	.name-photo{
-		display: none;
-	}
-	#words-col{
-		padding-left: 0;
-		text-align: center;
-	}
-	.name-header{
-		text-align: center;
-	}
-	.titles-header{
-		text-align: center;
-	}
-}
-#work-button{
-	margin-top: 30px;
+
+#subtitle-list li{
+	color: white;
+	font-size: 2vw;
 }
