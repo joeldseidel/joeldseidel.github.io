@@ -48,6 +48,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	border: 1px solid black;
 	background: rgba(0,0,0,0.8);
+    transition: all .1s ease-in;
 }
 
 .title-container:hover{
@@ -99,6 +100,7 @@ body {
 	padding-bottom: 10px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgb(0,0,0);
+    transition: all .2s ease-in;
 }
 
 .fa-github {
@@ -132,4 +134,12 @@ body {
 .fa-instagram:hover{
 	background-color: white;
 	color: #125688;
+}
+.fa-envelope-open-o{
+	background-color: #0066cc;
+	color: white;
+}
+.fa-envelope-open-o:hover{
+	background-color: white;
+	color: #0066cc;
 }
