@@ -12,14 +12,34 @@
     <script src="./script/index-script.js"></script>
 </head>
 <body>
-    <div class="container-fluid h-100 pl-0" id="index-container">
+    <div class="container-fluid h-100" id="index-container">
         <div class="row h-100">
-            <div class="col-lg-4 p-0 m-0 h-100 index-column">
-                <div class="container h-100" id="my-info-container">
-                    <h1 id="name-label">Hi, I'm Joel Seidel</h1>
+            <div class="col-lg-3 h-100 index-column">
+                <div class="row title-container">
+                    <div class="container d-flex h-100">
+                        <div class="row justify-content-center align-self-center">
+                            <i class="material-icons title-icon">important_devices</i>
+                            <h3 class="w-100">Software Developer</h3>
+                            <button type="button" id="software-work-button" class="btn btn-outline-light">View my work</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row title-container">
+                    <div class="container d-flex h-100">
+                        <div class="row justify-content-center align-self-center">
+                            <i class="material-icons title-icon">attach_money</i>
+                            <h3 class="w-100">Economist</h3>
+                            <p>I'm Ben Bernanke's biggest fan</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-5 p-0 m-0 h-100 index-column">
+            <div id="center-col" class="col-lg-6 h-100 index-column">
+                <div class="row w-100 justify-content-center align-items-center">
+                    <div class="container" id="my-info-container">
+                        <h1 id="name-label">Hi, I'm Joel Seidel</h1>
+                    </div>
+                </div>
                 <div id="social-media" class="row w-100 justify-content-center align-items-center">
                     <div class id="social-media-icons">
                         <ul class="list-inline">
@@ -31,21 +51,25 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 pl-10 m-0 index-column" id="titles-column">
+            <div class="col-lg-3 index-column" id="titles-column">
                 <div class="row title-container">
-                    <i class="material-icons title-icon">important_devices</i>
-                    <h3>Software Developer</h3>
-                    <button type="button" id="software-work-button" class="btn btn-outline-light">View my work</button>
+                    <div class="container d-flex h-100">
+                        <div class="row justify-content-center align-self-center">
+                            <i class="material-icons title-icon">school</i>
+                            <h3 class="w-100">Student</h3>
+                            <p>Undergraduate at Penn State</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="row title-container">
-                    <i class="material-icons title-icon">attach_money</i>
-                    <h3>Economist</h3>
-                    <p>I'm Ben Bernanke's biggest fan</p>
-                </div>
-                <div class="row title-container">
-                    <i class="material-icons title-icon">business_center</i>
-                    <h3>Entrepreneur</h3>
-                    <p>I own a company, odds are you don't</p>
+                    <div class="container d-flex h-100">
+                        <div class="row justify-content-center align-self-center">
+                            <i class="material-icons title-icon">business_center</i>
+                            <h3 class="w-100">Entrepreneur</h3>
+                            <p>Maverick Systems LLC</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
