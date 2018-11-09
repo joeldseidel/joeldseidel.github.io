@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
-html{
-	height:100%;
-}
 body {
-	background-image: url("../img/index-background.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
+	background: url("../img/index-background.jpg") no-repeat center;
 	background-size: cover;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	height: 100%;
+	height: 100vh;
 	overflow: hidden;
 }
 
@@ -49,34 +44,26 @@ body {
 	border: 1px solid black;
 	background: rgba(0,0,0,0.8);
     transition: all .1s ease-in;
+	color:white;
 }
 
 .title-container:hover{
 	background: rgba(0,0,0,0.5);
 	cursor:pointer;
 }
-
-.title-container:hover i{
-	background: transparent;
-	color: white;
-}
-
-.title-container h3, p{
-	color: white;
-}
-
-.title-container i{
-	transition: all .2s ease-in;
-	background: white;
-	color: black;
-}
-
 .title-icon{
 	font-size: 4vw !important;
 	padding: 20px;
-	background-color: white;
 	border-radius: 50%;
 	margin-bottom: 5px;
+	transition: all .2s ease-in;
+	background-color: white;
+	color: black;
+}
+
+.title-container:hover .title-icon{
+	background: transparent;
+	color:white;
 }
 
 #social-media{
@@ -142,4 +129,64 @@ body {
 .fa-envelope-open-o:hover{
 	background-color: white;
 	color: #0066cc;
+}
+
+@media only screen and (max-width: 991px){
+	body{
+		overflow: scroll;
+		background: url("../img/index-background.jpg") no-repeat top center fixed;
+		background-size: cover;
+		overflow-x: hidden;
+	}
+	#mobile-disp{
+		display: flex;
+	}
+	#desktop-disp{
+		display: none;
+	}
+}
+@media only screen and (min-width: 992px){
+	#mobile-disp{
+		display: none
+	}
+	#desktop-disp{
+		display: flex;
+	}
+}
+
+#mobile-disp{
+	width: 100vw;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8))
+}
+
+.mobile-title-container{
+	height: 300px;
+	display:block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	padding-right: 0;
+	font-family: 'Raleway', sans-serif;
+	border: 1px solid black;
+	background: rgba(0,0,0,0.8);
+	transition: all .1s ease-in;
+	color:white;
+	margin: 0;
+}
+
+#mobile-name-disp{
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	font-size: 10vw;
+	height: 100vh;
+	display: block;
+	padding: 10px;
+}
+
+#mobile-name-disp h1 {
+	font-size: 17vw;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left:0;
 }
