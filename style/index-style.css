@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 body {
-	background: url("../img/index-background.jpg") no-repeat center;
+	background: #000000 url("../img/index-background.jpg") no-repeat fixed center;
 	background-size: cover;
 	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 	height: 100vh;
@@ -9,6 +9,10 @@ body {
 
 .index-column{
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+#index-container{
+	width: 100vw;
 }
 
 #center-col{
@@ -156,11 +160,13 @@ body {
 
 #mobile-disp{
 	width: 100vw;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8))
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));
+	max-width: 100vw !important;
 }
 
 .mobile-title-container{
 	height: 300px;
+	width: 100% !important;
 	display:block;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -181,6 +187,7 @@ body {
 	height: 100vh;
 	display: block;
 	padding: 10px;
+	width: 100%;
 }
 
 #mobile-name-disp h1 {
@@ -189,4 +196,8 @@ body {
 	position: absolute;
 	bottom: 0;
 	left:0;
+}
+
+#name-box{
+	width: 100vw;
 }
