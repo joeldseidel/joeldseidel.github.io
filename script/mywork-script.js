@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.section-link').click(function(e){
-        e.preventDefault()
+        e.preventDefault();
         var sectionTo = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(sectionTo).offset().top - 100
