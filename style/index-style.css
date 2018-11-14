@@ -51,6 +51,11 @@ body {
 	color:white;
 }
 
+.title-container a{
+	color: white;
+	text-decoration: none;
+}
+
 .title-container:hover{
 	background: rgba(0,0,0,0.5);
 	cursor:pointer;

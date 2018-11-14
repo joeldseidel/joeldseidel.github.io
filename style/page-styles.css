@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+body{
+    width: 100vw !important;
+    overflow-x: hidden !important;
+}
+.page-background{
+    padding-top: 55px;
+}
+
+#page-header{
+    background: url("../img/psupres.jpg") center top no-repeat fixed;
+    background-size: cover;
+    height: calc(100vh - 55px);
+}
+
+.page-header-text{
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    font-size: 5vw;
+    text-shadow: 0 0 20px black;
+}
+
+.page-header-container{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9));
+    width: 100%;
+}
+
+.scroll-prompt-container{
+    width:100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+.scroll-prompt-container i {
+    font-size: 50px;
+    animation: fadein 3s;
+}
+
+.scroll-prompt-container a {
+    text-decoration: none;
+    color:white;
+}
+
+.content-row{
+    height: 50vh;
+    padding-top: 20px;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
