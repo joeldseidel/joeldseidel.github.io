@@ -4,7 +4,7 @@ body{
     overflow-x: hidden !important;
 }
 .page-background{
-    padding-top: 55px;
+
 }
 
 #page-header{
@@ -46,8 +46,32 @@ body{
 }
 
 .content-row{
-    height: 50vh;
-    padding-top: 20px;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    background: url('../img/code background-1.jpg');
+    background-size: 100% auto;
+}
+
+.content-container{
+    padding-top: 50px;
+    background: rgba(0,0,0,0.8);
+}
+
+.skill-listing{
+    text-align: center;
+}
+
+.skill-listing i {
+    font-size: 100px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 20px;
+    color: #1a1a1a;
+}
+
+.skill-listing h3 {
+    margin-top: 15px;
 }
 
 @keyframes fadein {
