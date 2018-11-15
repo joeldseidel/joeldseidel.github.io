@@ -46,11 +46,17 @@ body{
 }
 
 .content-row{
-    min-height: 100vh;
+    height: 100%;
     color: white;
     font-family: 'Raleway', sans-serif;
-    background: url('../img/code background-1.jpg');
     background-size: 100% auto;
+}
+
+#first-content-row{
+    background: url('../img/code background-1.jpg');
+}
+#second-content-row{
+    background: url('../img/code background-2.jpg');
 }
 
 .content-container{
@@ -58,8 +64,14 @@ body{
     background: rgba(0,0,0,0.8);
 }
 
+.content-container h1{
+    text-align: center;
+}
+
 .skill-listing{
     text-align: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
 }
 
 .skill-listing i {
@@ -68,10 +80,49 @@ body{
     border-radius: 50%;
     padding: 20px;
     color: #1a1a1a;
+    transition: all .25s ease-in;
+}
+
+.skill-listing i:hover{
+    color: white;
+    background-color: rgba(0,0,0,0);
 }
 
 .skill-listing h3 {
     margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    text-shadow: 0 0 20px black;
+}
+
+.portfolio-listing{
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.portfolio-listing h3{
+    margin-top: 15px;
+}
+
+.portfolio-image{
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 5%;
+    filter: grayscale(50%);
+    transition: all .25s ease-in;
+}
+
+.portfolio-image:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+#github-link{
+    font-size: 200px;
+    color: white;
+    text-decoration: none;
 }
 
 @keyframes fadein {
