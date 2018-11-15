@@ -13,17 +13,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../script/pages-script.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="200">
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcontent" aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle Navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <ul id="navbarcontent" class="navbar-nav collapse navbar-collapse">
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
-            </li>
-        </ul>
-    </nav>
+<body>
     <div class="page-background">
         <div class="container-fluid p-0">
             <div class="row m-0" id="page-header">
@@ -32,6 +22,9 @@
                     <div class="scroll-prompt-container">
                         <a id="scroll-button" href="#first-content-row"><i class="material-icons">expand_more</i></a>
                     </div>
+                </div>
+                <div id="home-button" data-aos="fade-right">
+                    <a href="../index.html" data-toggle="tooltip" data-placement="right" title="Return to home page"><i class="material-icons">home</i></a>
                 </div>
             </div>
             <div class="row m-0 content-row" id="first-content-row">
@@ -71,7 +64,7 @@
             </div>
             <div class="row m-0 content-row" id="second-content-row">
                 <div class="container-fluid content-container">
-                    <h1>A portfolio to back up my claims</h1>
+                    <h1>A portfolio to back up my skills</h1>
                     <div class="row w-100">
                         <div class="col-lg-3">
                             <div class="container-fluid portfolio-listing" data-aos="fade-up" data-aos-delay="200">

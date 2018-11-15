@@ -3,14 +3,36 @@ body{
     width: 100vw !important;
     overflow-x: hidden !important;
 }
-.page-background{
-
-}
 
 #page-header{
     background: url("../img/psupres.jpg") center top no-repeat fixed;
     background-size: cover;
-    height: calc(100vh - 55px);
+    height: 100vh;
+}
+
+#home-button{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#home-button a{
+    color: white;
+    text-decoration: none;
+}
+
+#home-button i {
+    font-size: 30px;
+    padding: 10px;
+    border: 2px white solid;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.5);
+    transition: all 0.1s ease-in;
+}
+
+#home-button i:hover{
+    background: white;
+    color: black;
 }
 
 .page-header-text{
@@ -80,7 +102,7 @@ body{
     border-radius: 50%;
     padding: 20px;
     color: #1a1a1a;
-    transition: all .25s ease-in;
+    transition: all .1s ease-in;
 }
 
 .skill-listing i:hover{
