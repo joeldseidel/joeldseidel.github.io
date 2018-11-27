@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95b5bd9-5f6e-44b4-8381-170f67d9472a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/developer.html" afterPath="$PROJECT_DIR$/pages/developer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/mywork-script.js" afterPath="$PROJECT_DIR$/script/mywork-script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/mywork-style.css" afterPath="$PROJECT_DIR$/style/mywork-style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/page-styles.css" afterPath="$PROJECT_DIR$/style/page-styles.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="developer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="developer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/developer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="125" column="48" lean-forward="true" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
+            <state relative-caret-position="561">
+              <caret line="128" column="108" lean-forward="false" selection-start-line="128" selection-start-column="108" selection-end-line="128" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-styles.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page-styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/page-styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
+            <state relative-caret-position="476">
+              <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -143,8 +140,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style/index-style.css" />
         <option value="$PROJECT_DIR$/script/pages-script.js" />
-        <option value="$PROJECT_DIR$/pages/developer.html" />
         <option value="$PROJECT_DIR$/style/page-styles.css" />
+        <option value="$PROJECT_DIR$/pages/developer.html" />
       </list>
     </option>
   </component>
@@ -159,10 +156,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -360,18 +357,18 @@
       <workItem from="1542139318557" duration="13143000" />
       <workItem from="1542254249422" duration="6484000" />
       <workItem from="1542267700061" duration="11221000" />
-      <workItem from="1543298084038" duration="3098000" />
+      <workItem from="1543298084038" duration="3512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173061000" />
+    <option name="totallyTimeSpent" value="173475000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21083455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -771,18 +768,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/developer.html">
+    <entry file="file://$PROJECT_DIR$/style/page-styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="125" column="48" lean-forward="true" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
+        <state relative-caret-position="476">
+          <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/page-styles.css">
+    <entry file="file://$PROJECT_DIR$/pages/developer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="89" column="46" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
+        <state relative-caret-position="561">
+          <caret line="128" column="108" lean-forward="false" selection-start-line="128" selection-start-column="108" selection-end-line="128" selection-end-column="108" />
           <folding />
         </state>
       </provider>
