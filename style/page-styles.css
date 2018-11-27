@@ -72,6 +72,7 @@ body{
     color: white;
     font-family: 'Raleway', sans-serif;
     background-size: 100% auto;
+    overflow-y: hidden;
 }
 
 #first-content-row{
@@ -79,6 +80,14 @@ body{
 }
 #second-content-row{
     background: url('../img/code background-2.jpg');
+}
+
+#third-content-row{
+    background: url('../img/code-background-3.jpg');
+}
+
+#fourth-content-row{
+    background: url('../img/background-4.jpg') top no-repeat fixed;
 }
 
 .content-container{
@@ -90,13 +99,13 @@ body{
     text-align: center;
 }
 
-.skill-listing{
+.icon-listing{
     text-align: center;
     padding-top: 20%;
     padding-bottom: 20%;
 }
 
-.skill-listing i {
+.icon-listing i {
     font-size: 100px;
     background-color: white;
     border-radius: 50%;
@@ -105,12 +114,12 @@ body{
     transition: all .1s ease-in;
 }
 
-.skill-listing i:hover{
+.icon-listing i:hover{
     color: white;
     background-color: rgba(0,0,0,0);
 }
 
-.skill-listing h3 {
+.icon-listing h3 {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 40px;

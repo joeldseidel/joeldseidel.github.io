@@ -12,7 +12,7 @@ $(document).ready(function(){
     }, function(event){
         $(event.target).closest("div.card").css('box-shadow', '0 0 5px #808080');
     });
-    var skillListing = $('.skill-listing');
+    var skillListing = $('.icon-listing');
     skillListing.hover(function(event){
         var thisSkillListing = $(event.target);
         thisSkillListing.stop().animate({
