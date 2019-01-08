@@ -4,10 +4,13 @@ body{
     overflow-x: hidden !important;
 }
 
-#page-header{
-    background: url("../img/psupres.jpg") center top no-repeat fixed;
-    background-size: cover;
+.page-header{
     height: 100vh;
+    background-size: cover;
+}
+
+#developer-page-header{
+    background: url('../img/psupres.jpg') center top no-repeat fixed;
 }
 
 #home-button{
@@ -44,6 +47,7 @@ body{
     bottom: 50px;
     font-size: 5vw;
     text-shadow: 0 0 20px black;
+    padding-right: 30px;
 }
 
 .page-header-container{
@@ -73,6 +77,7 @@ body{
     font-family: 'Raleway', sans-serif;
     background-size: 100% auto !important;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #first-content-row{
@@ -91,6 +96,7 @@ body{
 }
 
 .content-container{
+    width:100%;
     padding-top: 50px;
     background: rgba(0,0,0,0.8);
 }
@@ -100,6 +106,7 @@ body{
 }
 
 .icon-listing{
+    width:100%;
     text-align: center;
     padding-top: 20%;
     padding-bottom: 20%;
@@ -125,6 +132,37 @@ body{
     font-size: 40px;
     text-shadow: 0 0 20px black;
 }
+
+.image-icon-image{
+    height: 140px;
+    width: 140px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all .1s ease-in;
+}
+
+.image-icon-image:hover{
+    background: rgba(0,0,0,0);
+}
+
+#psu-image-icon img{
+    content: url("../img/psu-logo-dark.png");
+    padding: 20px;
+}
+
+#psu-image-icon img:hover{
+    content: url("../img/psu-logo-trans.png");
+}
+
+#tsa-image-icon img{
+    content: url("../img/tsa-logo-dark.png");
+    padding: 50px 20px;
+}
+
+#tsa-image-icon img:hover{
+    content: url("../img/tsa-logo-trans.png");
+}
+
 
 .portfolio-listing{
     text-align: center;
