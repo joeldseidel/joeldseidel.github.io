@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95b5bd9-5f6e-44b4-8381-170f67d9472a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/student.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/developer.html" afterPath="$PROJECT_DIR$/pages/developer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/page-styles.css" afterPath="$PROJECT_DIR$/style/page-styles.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/pages/developer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="123" column="45" lean-forward="false" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+              <caret line="150" column="47" lean-forward="false" selection-start-line="150" selection-start-column="47" selection-end-line="150" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -352,12 +349,12 @@
       <workItem from="1545516448388" duration="2910000" />
       <workItem from="1546229979743" duration="713000" />
       <workItem from="1546485030315" duration="34000" />
-      <workItem from="1546915155177" duration="5008000" />
+      <workItem from="1546915155177" duration="5056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185013000" />
+    <option name="totallyTimeSpent" value="185061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -768,7 +765,7 @@
     <entry file="file://$PROJECT_DIR$/pages/developer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="123" column="45" lean-forward="false" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="45" />
+          <caret line="150" column="47" lean-forward="false" selection-start-line="150" selection-start-column="47" selection-end-line="150" selection-end-column="47" />
           <folding />
         </state>
       </provider>
