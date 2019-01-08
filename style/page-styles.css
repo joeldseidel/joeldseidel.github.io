@@ -13,6 +13,11 @@ body{
     background: url('../img/psupres.jpg') center top no-repeat fixed;
 }
 
+#student-page-header{
+    background: url('../img/pennstate.jpg') right bottom no-repeat fixed;
+    background-size: auto 125%;
+}
+
 #home-button{
     position: absolute;
     top: 10px;
