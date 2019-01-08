@@ -112,6 +112,12 @@ body{
     padding-bottom: 20%;
 }
 
+.icon-listing li{
+    padding: 10px;
+    list-style-type: none;
+    text-align: left;
+}
+
 .icon-listing i {
     font-size: 100px;
     background-color: white;
