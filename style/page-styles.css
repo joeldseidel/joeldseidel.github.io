@@ -14,7 +14,7 @@ body{
 }
 
 #student-page-header{
-    background: url('../img/pennstate.jpg') right bottom no-repeat fixed;
+    background: url('../img/penn-state-right.jpg') right bottom no-repeat fixed;
     background-size: auto 125%;
 }
 
@@ -80,7 +80,7 @@ body{
     height: 100%;
     color: white;
     font-family: 'Raleway', sans-serif;
-    background-size: 100% auto !important;
+    background-size: cover !important;
     overflow-y: hidden;
     overflow-x: hidden;
 }
