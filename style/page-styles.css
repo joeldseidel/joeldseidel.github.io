@@ -18,6 +18,16 @@ body{
     background-size: auto 125%;
 }
 
+#citizen-page-header{
+    background: url('../img/economics-background.jpg') center top no-repeat fixed;
+    background-size: auto 100vw;
+}
+
+#entrepreneur-page-header{
+    background: url('../img/entrepreneur-background.jpg') center top no-repeat fixed;
+    background-size: 100% auto;
+}
+
 #home-button{
     position: absolute;
     top: 10px;
