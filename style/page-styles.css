@@ -200,6 +200,29 @@ body{
     text-decoration: none;
 }
 
+.content-screen{
+    height: 100vh;
+    position: relative;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    background-size: cover !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.content-screen-header-text {
+    width: 100%;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    font-size: 3vw;
+    text-shadow: 0 0 20px black;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
 @keyframes fadein {
     0% {
         opacity: 0;
