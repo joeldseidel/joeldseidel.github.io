@@ -223,6 +223,38 @@ body{
     padding-left: 30px;
 }
 
+.mouseover-icon-listing{
+    text-align: center;
+    cursor: pointer;
+}
+
+.mouseover-icon-listing i{
+    font-size: 150px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 30px;
+    color: #1a1a1a;
+    transition: all .25s ease-in;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.mouseover-icon-listing:hover i{
+    font-size: 100px;
+    padding: 30px;
+    transition: font-size 0.5s;
+}
+
+.mouseover-icon-listing .icon-listing-body{
+    color: rgba(255,255,255,0);
+    text-align: left;
+}
+
+.mouseover-icon-listing:hover .icon-listing-body {
+    color: rgba(255,255,255,1);
+    transition: color 0.75s ease-in;
+}
+
 @keyframes fadein {
     0% {
         opacity: 0;

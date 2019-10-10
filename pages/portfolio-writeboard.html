@@ -6,9 +6,11 @@
     <link rel="stylesheet" type="text/css" href="../style/page-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../script/pages-script.js"></script>
 </head>
 <body>
@@ -18,7 +20,7 @@
                 <div class="container-fluid page-header-container" data-aos="fade-up" data-aos-duration="1000">
                     <h1 class="page-header-text">WriteBoard is an award-winning online, multi-user, simultaneous collaboration tool</h1>
                     <div class="scroll-prompt-container">
-                        <a id="scroll-prompt" href="#project-background"><i class="material-icons">expand_more</i></a>
+                        <a class="scroll-button" href="#project-background"><i class="material-icons">expand_more</i></a>
                     </div>
                 </div>
                 <div id="home-button" data-aos="fade-right">
@@ -27,35 +29,69 @@
             </div>
             <div class="row m-0 content-screen" id="project-background" style="background: url('../img/code background-1.jpg');">
                 <div class="content-container">
-                    <h1>WriteBoard was developed entirely in two weeks for the Boeing Potomac Region Hack-a-thon</h1>
+                    <h1>WriteBoard was developed entirely in two weeks for the Boeing Potomac Region Hack-a-thon.</h1>
                     <div class="row w-100 h-100 m-0">
                         <div class="col-lg-4">
-                            <div class="container-fluid icon-listing" data-aos="fade-left" data-aos-delay="50">
+                            <div class="container-fluid mouseover-icon-listing" data-aos="fade-left" data-aos-delay="50">
                                 <i class="material-icons">group</i>
                                 <h3 class="w-100">Agile</h3>
-                                <p>WriteBoard was built by a team of 5 developers using an Agile board and a GitLab repo. I was the project/product manager and ended up writing the vast majority of the code.</p>
+                                <p class="icon-listing-body">WriteBoard was built by a team of 5 developers using an Agile board and a GitLab repo. I was the project/product manager and ended up writing the vast majority of the code.</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="container-fluid icon-listing" data-aos="fade-left" data-aos-delay="100">
+                            <div class="container-fluid mouseover-icon-listing" data-aos="fade-left" data-aos-delay="100">
                                 <i class="material-icons">important_devices</i>
                                 <h3 class="w-100">Simultaneous</h3>
-                                <p>WriteBoard uses a PHP WebSockets implementation on the server-side to handle drawing and chat messages simultaneously. The WebSockets server maintains synchronized client connections.</p>
+                                <p class="icon-listing-body">WriteBoard uses a PHP WebSockets implementation on the server-side to handle drawing and chat messages simultaneously. The WebSockets server maintains synchronized client connections.</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="container-fluid icon-listing" data-aos="fade-left" data-aos-delay="150">
+                            <div class="container-fluid mouseover-icon-listing" data-aos="fade-left" data-aos-delay="150">
                                 <i class="material-icons">storage</i>
                                 <h3 class="w-100">Persistent</h3>
-                                <p>WriteBoard employs an Java-based HTTP server API to allow for non-blocking persistent data storage and sequentially accessible artifact retrieval and serialized data warehousing.</p>
+                                <p class="icon-listing-body">WriteBoard employs an Java-based HTTP server API to allow for non-blocking persistent data storage and sequentially accessible artifact retrieval and serialized data warehousing.</p>
                             </div>
                         </div>
                     </div>
                     <div class="scroll-prompt-container">
-                        <a href="#technical-overview"><i class="material-icons">expand_more</i></a>
+                        <a class="scroll-button" href="#technical-overview"><i class="material-icons">expand_more</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0 content-screen" id="technical-overview" style="background: url('../img/code background-2.jpg');">
+                <div class="content-container">
+                    <h1>WriteBoard is built on PHP WebSockets, a Java HTTP API, and a Bootstrap/JavaScript frontend.</h1>
+                    <div class="row w-100 h-100 m-0">
+                        <div class="col-lg-4">
+                            <div class="container-fluid mouseover-icon-listing" data-aos="fade-right" data-aos-delay="50">
+                                <i class="material-icons">import_export</i>
+                                <h3>WebSockets</h3>
+                                <p class="icon-listing-body">This component was created using the Ratchet PHP library and broadcasts actions from connected clients to connected clients. The WebSockets server is written to be as lean as possible to keep up with high volume requests in real time.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="container-fluid mouseover-icon-listing" data-aos="fade-right" data-aos-delay="100">
+                                <i class="material-icons">storage</i>
+                                <h3>Storage API</h3>
+                                <p class="icon-listing-body">This component was created with a Java HTTP server that accepted serialized drawing objects and added them to a queue to be stored in a MySQL database. The API runs asynchronous database access for instant responses to the WebSockets API.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="container-fluid mouseover-icon-listing" data-aos="fade-right" data-aos-delay="150">
+                                <i class="material-icons">web</i>
+                                <h3>Front-end</h3>
+                                <p class="icon-listing-body">This component was created using JavaScript and Bootstrap. Bootstrap was used for formatting support for display components. Over one thousand lines of JavaScript manages communication with the WebSockets server and handles events</p>
+                            </div>
+                        </div>
+                        <div class="scroll-prompt-container">
+                            <a class="scroll-button" href="#project-approach"><i class="material-icons">expand_more</i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<script>
+    AOS.init();
+</script>
 </body>
