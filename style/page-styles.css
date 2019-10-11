@@ -28,6 +28,10 @@ body{
     background-size: 100% auto;
 }
 
+#writeboard-page-header{
+    background: url('../img/writeboardheader.JPG') right top no-repeat fixed;
+}
+
 #home-button{
     position: absolute;
     top: 10px;
@@ -198,6 +202,61 @@ body{
     font-size: 200px;
     color: white;
     text-decoration: none;
+}
+
+.content-screen{
+    height: 100vh;
+    position: relative;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    background-size: cover !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.content-screen-header-text {
+    width: 100%;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    font-size: 3vw;
+    text-shadow: 0 0 20px black;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.mouseover-icon-listing{
+    text-align: center;
+    cursor: pointer;
+}
+
+.mouseover-icon-listing i{
+    font-size: 150px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 30px;
+    color: #1a1a1a;
+    transition: all .25s ease-in;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.mouseover-icon-listing:hover i{
+    font-size: 100px;
+    padding: 30px;
+    transition: font-size 0.5s;
+}
+
+.mouseover-icon-listing .icon-listing-body{
+    color: rgba(255,255,255,0);
+    text-align: left;
+}
+
+.mouseover-icon-listing:hover .icon-listing-body {
+    color: rgba(255,255,255,1);
+    transition: color 0.6s ease-in;
 }
 
 @keyframes fadein {
