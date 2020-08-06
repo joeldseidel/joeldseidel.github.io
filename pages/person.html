@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/page-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../script/pages-script.js"></script>
+    <title>About Me: Joel Seidel</title>
+</head>
+<body>
+<div class="page-background">
+    <div class="container-fluid p-0">
+        <div class="row m-0 page-header" id="citizen-page-header">
+            <div class="container-fluid page-header-container" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="page-header-text">I have several interests outside of work - traveling, sports, and going outside</h1>
+                <div class="scroll-prompt-container">
+                    <a class="scroll-button" href="#first-content-row"><i class="material-icons">expand_more</i></a>
+                </div>
+            </div>
+            <div id="home-button" data-aos="fade-right">
+                <a href="../index.html" data-toggle="tooltip" data-placement="right" title="Return to home page"><i class="material-icons">home</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 content-row" id="first-content-row" style="background: url('../img/economics.jpg') center center no-repeat">
+        <div class="content-container">
+            <h1>I enjoy traveling all over the United States and overseas - here are some fun photos from my adventures</h1>
+            <div id="travel" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#travel" data-slide-to="0" class="active"></li>
+                    <li data-target="#travel" data-slide-to="1"></li>
+                    <li data-target="#travel" data-slide-to="2"></li>
+                    <li data-target="#travel" data-slide-to="3"></li>
+                    <li data-target="#travel" data-slide-to="4"></li>
+                    <li data-target="#travel" data-slide-to="5"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/travel/maine.jpg" alt="hiking in maine">
+                        <div class="carousel-caption">
+                            <h3>Hiking in Maine</h3>
+                            <p>I traveled to Acadia in June 2019 and climbed this mountain over Mt Desert Island</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travel/mt nittany.jpg" alt="mountain in maine">
+                        <div class="carousel-caption">
+                            <h3>Hiking Mt Nittany</h3>
+                            <p>Some Penn State friends and I have taken on the Mt Nittany climb in State College a few times over the past few years</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travel/detroit.jpg" alt="detroit">
+                        <div class="carousel-caption">
+                            <h3>Taking in a Tiger's Game</h3>
+                            <p>Detroit is one of my favorite places in the USA. I'm a big Detroit sports fan and got to take in a Tigers game back in 2016</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travel/nyc.jpg" alt="nyc">
+                        <div class="carousel-caption">
+                            <h3>New York City</h3>
+                            <p>I have a goal to visit all 30 ballparks over the next few years. Here I am at Citi Field in NYC for a Mets game in 2018</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travel/tsa.jpg" alt="tsa">
+                        <div class="carousel-caption">
+                            <h3>TSA Nationals - Orlando</h3>
+                            <p>My team and I won a national award in software development at the Technology Student Association (TSA) National Conference in 2017</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travel/iceland.jpg" alt="iceland">
+                        <div class="carousel-caption">
+                            <h3>Iceland/France</h3>
+                            <p>Penn State funded our start-up founding team to attend the World Health Informatics Conference in Lyon, France in 2019. First time in Europe!</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#travel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#travel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+</script>
