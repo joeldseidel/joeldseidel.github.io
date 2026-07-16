@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Joel Seidel — Technology Project Manager. Technical enough to build it. Experienced enough to ship it." />
+  <meta property="og:title" content="Joel Seidel" />
+  <meta property="og:description" content="Technical enough to build it. Experienced enough to ship it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://joeldseidel.github.io/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <title>Joel Seidel</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0D1117;
+      --bg-card:     #161B22;
+      --bg-titlebar: #21262D;
+      --border:      #30363D;
+      --border-dim:  #21262D;
+      --green:       #4ADE80;
+      --text-primary:#F0F6FC;
+      --text-body:   #C9D1D9;
+      --text-muted:  #8B949E;
+      --text-dim:    #484F58;
+      --blue:        #58A6FF;
+      --java-green:  #3FB950;
+      --amber:       #E3B341;
+      --max-w:       880px;
+      --mono:        'JetBrains Mono', 'Courier New', Courier, monospace;
+      --sans:        'JetBrains Mono', 'Courier New', Courier, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--mono);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 0.5px solid var(--border-dim);
+      padding: 12px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand { font-size: 15px; user-select: none; }
+    .nav-brand .g { color: var(--green); }
+    .nav-brand .d { color: var(--text-dim); }
+
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--green); }
+
+    /* ── SHARED SECTION ──────────────────────────────────────────────────── */
+    .section-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 52px 36px;
+    }
+    .section-inner + .section-inner,
+    .section-sep { border-top: 0.5px solid var(--border-dim); }
+
+    .section-cmd {
+      font-size: 13px;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      margin-bottom: 26px;
+    }
+
+    /* ── HERO ────────────────────────────────────────────────────────────── */
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 56px 36px 60px;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+
+    /* ── TERMINAL WINDOW ─────────────────────────────────────────────────── */
+    .term-win {
+      background: var(--bg-card);
+      border-radius: 8px;
+      border: 0.5px solid var(--border);
+      max-width: 660px;
+      overflow: hidden;
+    }
+
+    .term-bar {
+      background: var(--bg-titlebar);
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .tl { display: flex; gap: 6px; }
+    .tl span {
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .tl .r { background: #FF5F57; }
+    .tl .y { background: #FEBC2E; }
+    .tl .gn { background: #28C840; }
+
+    .term-title {
+      flex: 1;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .term-body {
+      padding: 20px 22px 26px;
+      font-size: 16px;
+      line-height: 1.85;
+      min-height: 320px;
+    }
+
+    #term-cursor {
+      display: inline-block;
+      width: 8px; height: 14px;
+      background: var(--green);
+      vertical-align: middle;
+      opacity: 0;
+    }
+    #term-cursor.on { animation: cur 1.06s step-end infinite; }
+
+    @keyframes cur {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    /* ── HERO CTAS ───────────────────────────────────────────────────────── */
+    .hero-ctas {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--bg);
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-family: var(--mono);
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn-green:hover { opacity: 0.85; }
+
+    .btn-ghost {
+      border: 0.5px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-family: var(--mono);
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      background: transparent;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+
+    /* ── ABOUT ───────────────────────────────────────────────────────────── */
+    .about-text {
+      color: var(--text-body);
+      font-size: 16px;
+      line-height: 1.8;
+      font-family: var(--sans);
+      max-width: 640px;
+      border-left: 2px solid var(--border-dim);
+      padding-left: 18px;
+    }
+
+    /* ── EXPERIENCE ──────────────────────────────────────────────────────── */
+    .exp-list { display: flex; flex-direction: column; gap: 24px; }
+
+    .exp-item {
+      padding-left: 16px;
+      border-left: 2px solid var(--border-dim);
+    }
+    .exp-item.current { border-left-color: var(--green); }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+
+    .exp-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--text-muted);
+    }
+    .exp-item.current .exp-title { color: var(--green); }
+
+    .exp-dates { font-size: 13px; color: var(--text-dim); flex-shrink: 0; }
+
+    .exp-co {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-family: var(--sans);
+      margin-bottom: 8px;
+    }
+
+    .exp-desc {
+      font-size: 14.5px;
+      color: var(--text-body);
+      font-family: var(--sans);
+      line-height: 1.65;
+    }
+
+    /* ── PROJECTS ────────────────────────────────────────────────────────── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .proj-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 15px;
+      transition: border-color 0.18s;
+    }
+    .proj-card:hover { border-color: var(--green); }
+
+    .proj-path {
+      font-size: 12px;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .proj-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: var(--text-primary);
+      font-family: var(--sans);
+      margin-bottom: 6px;
+    }
+
+    .proj-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      font-family: var(--sans);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .tag {
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+    .tb { color: var(--blue);       border: 0.5px solid rgba(88,166,255,0.28); }
+    .tg { color: var(--java-green); border: 0.5px solid rgba(63,185,80,0.28); }
+    .ta { color: var(--amber);      border: 0.5px solid rgba(227,179,65,0.28); }
+
+    /* ── CONTACT ─────────────────────────────────────────────────────────── */
+    .contact-note {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      font-family: var(--sans);
+      margin-bottom: 30px;
+      line-height: 1.65;
+    }
+    .contact-note .g { color: var(--green); }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .c-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      text-align: center;
+    }
+    .c-card.primary { border-color: rgba(74,222,128,0.22); }
+
+    .c-label {
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      margin-bottom: 7px;
+    }
+
+    .c-val {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: block;
+      transition: color 0.15s;
+    }
+    .c-card.primary .c-val { color: var(--green); }
+    .c-val:hover { color: var(--green); }
+
+    /* ── CONTACT FORM ────────────────────────────────────────────────────── */
+    .form-wrap {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 18px;
+    }
+
+    .form-cmd {
+      font-size: 13px;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .f-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .f-row.top { align-items: flex-start; }
+
+    .f-flag {
+      font-size: 13px;
+      color: var(--text-dim);
+      width: 68px;
+      flex-shrink: 0;
+    }
+    .f-row.top .f-flag { padding-top: 10px; }
+
+    .f-input, .f-area {
+      flex: 1;
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: 4px;
+      padding: 9px 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+      font-family: var(--mono);
+      outline: none;
+      transition: border-color 0.15s, color 0.15s;
+      width: 100%;
+    }
+    .f-input:focus, .f-area:focus {
+      border-color: var(--green);
+      color: var(--text-primary);
+    }
+    .f-input::placeholder, .f-area::placeholder { color: var(--text-dim); }
+    .f-area { min-height: 80px; resize: vertical; }
+
+    .f-submit { display: flex; justify-content: flex-end; margin-top: 6px; }
+
+    #form-ok {
+      display: none;
+      color: var(--green);
+      font-size: 14px;
+      margin-top: 14px;
+      text-align: center;
+      font-family: var(--sans);
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────────────────── */
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 14px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 0.5px solid var(--border-dim);
+    }
+
+    .foot-prompt { font-size: 14px; }
+    .foot-prompt .g { color: var(--green); }
+    .foot-prompt .d { color: var(--text-dim); }
+
+    .foot-cur {
+      display: inline-block;
+      width: 8px; height: 13px;
+      background: var(--green);
+      vertical-align: middle;
+      animation: cur 1.36s step-end infinite;
+    }
+
+    .foot-copy {
+      font-size: 13px;
+      color: var(--text-dim);
+      font-family: var(--sans);
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      nav { padding: 12px 20px; }
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: 12px; }
+      .hero-inner, .section-inner { padding-left: 20px; padding-right: 20px; }
+      .footer-inner { padding-left: 20px; padding-right: 20px; }
+      .hero-eyebrow { font-size: 10px; }
+      .term-body { font-size: 14px; min-height: 260px; }
+      .proj-grid { grid-template-columns: 1fr; }
+      .contact-cards { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 400px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+  <nav>
+    <span class="nav-brand">
+      <span class="g">joel@mbp</span><span class="d">:~$</span>
+    </span>
+    <div class="nav-links">
+      <a href="#about">./about</a>
+      <a href="#experience">./experience</a>
+      <a href="#projects">./projects</a>
+      <a href="#contact">./contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Technology Project Manager &middot; Fort Worth, TX</p>
+
+    <div class="term-win">
+      <div class="term-bar">
+        <div class="tl">
+          <span class="r"></span>
+          <span class="y"></span>
+          <span class="gn"></span>
+        </div>
+        <span class="term-title">joel-seidel &mdash; bash &mdash; 80&times;24</span>
+      </div>
+      <div class="term-body">
+        <div id="tc"></div>
+        <span id="term-cursor"></span>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-green">$ ./view-work.sh</a>
+      <a href="#contact" class="btn-ghost">./contact.sh</a>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────────────────────── -->
+  <div class="section-sep">
+    <div class="section-inner" id="about">
+      <p class="section-cmd">$ cat about.txt</p>
+      <p class="about-text">
+        Penn State IST &amp; Economics, 2021. From building software to writing project plans &mdash;
+        founded a software startup, shipped payment systems at Accenture, and now run project
+        delivery at Citi. The throughline: technical depth in service of outcomes that ship.
+      </p>
+    </div>
+  </div>
+
+  <!-- ── EXPERIENCE ────────────────────────────────────────────────────────── -->
+  <div class="section-sep">
+    <div class="section-inner" id="experience">
+      <p class="section-cmd">$ cat experience.log</p>
+      <div class="exp-list">
+
+        <div class="exp-item current">
+          <div class="exp-header">
+            <span class="exp-title">Tech Project Manager</span>
+            <span class="exp-dates">2023 &mdash; present</span>
+          </div>
+          <p class="exp-co">Citi &middot; Irving, TX</p>
+          <p class="exp-desc">Manages a multi-million dollar annual portfolio of financial reference data
+            projects spanning OCC/SEC regulatory requirements, revenue initiatives, and legacy system
+            retirements. Led AI tooling integration into PMO workflows. Full lifecycle ownership from
+            requirements through closure.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Senior Analyst, Software Engineering</span>
+            <span class="exp-dates">2021 &mdash; 2023</span>
+          </div>
+          <p class="exp-co">Accenture &middot; Philadelphia, PA</p>
+          <p class="exp-desc">Managed 10+ developers as delivery lead for a Fortune 500 client. Key
+            contributor to payment microservices that reduced live support agent interactions by
+            2&nbsp;million per year. Drove quarterly roadmap refinement and effort estimation.</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <span class="exp-title">Founder</span>
+            <span class="exp-dates">2019 &mdash; 2021</span>
+          </div>
+          <p class="exp-co">Maverick Software Systems &middot; State College, PA</p>
+          <p class="exp-desc">Built a software platform helping hospital firms manage quality-of-care
+            risk by interpolating clinical outcomes from EHR systems. Led product strategy, customer
+            discovery, and feature prioritization across the full lifecycle of the venture.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROJECTS ──────────────────────────────────────────────────────────── -->
+  <div class="section-sep">
+    <div class="section-inner" id="projects">
+      <p class="section-cmd">$ ls -la ./projects/</p>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <p class="proj-path">drwxr-xr-x &nbsp;septa-telework-model/</p>
+          <p class="proj-title">SEPTA COVID Telework Model</p>
+          <p class="proj-desc">AI model and interactive map analyzing COVID-19's impact on telework and
+            public transit for the City of Philadelphia and SEPTA. Delivered to city leadership three
+            months from project start.</p>
+          <div class="tags">
+            <span class="tag tb">AI / ML</span>
+            <span class="tag tb">Civic tech</span>
+            <span class="tag tb">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <p class="proj-path">drwxr-xr-x &nbsp;maverick-ehr-platform/</p>
+          <p class="proj-title">Maverick EHR Risk Platform</p>
+          <p class="proj-desc">Healthcare quality-of-care risk platform interpolating clinical outcomes
+            from electronic health records to help hospital firms identify and mitigate care risk.</p>
+          <div class="tags">
+            <span class="tag tg">Java</span>
+            <span class="tag tg">JavaScript</span>
+            <span class="tag tg">Healthcare</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <p class="proj-path">drwxr-xr-x &nbsp;vibe/</p>
+          <p class="proj-title">Vibe &mdash; 1st Place, HackPSU 2019</p>
+          <p class="proj-desc">Real-time collaborative project management platform. Conceptualized,
+            built, and shipped in under 24 hours.</p>
+          <div class="tags">
+            <span class="tag tg">Java</span>
+            <span class="tag tg">Real-time</span>
+            <span class="tag tg">Hackathon</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <p class="proj-path">drwxr-xr-x &nbsp;project-estimation-tooling/</p>
+          <p class="proj-title">ML Project Estimation Tooling</p>
+          <p class="proj-desc">Data-driven tooling to improve effort estimation accuracy across an
+            enterprise project portfolio, using patterns in historical delivery data.</p>
+          <div class="tags">
+            <span class="tag ta">SQL</span>
+            <span class="tag ta">ML</span>
+            <span class="tag ta">Enterprise</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ───────────────────────────────────────────────────────────── -->
+  <div class="section-sep">
+    <div class="section-inner" id="contact">
+      <p class="section-cmd">$ ./contact.sh</p>
+      <p class="contact-note">
+        <span class="g">#</span>&nbsp;Open to new opportunities. Reach out directly or send a message below.
+      </p>
+
+      <div class="contact-cards">
+        <div class="c-card primary">
+          <p class="c-label">email</p>
+          <a href="mailto:me@joelseidel.com" class="c-val">me@joelseidel.com</a>
+        </div>
+        <div class="c-card">
+          <p class="c-label">linkedin</p>
+          <a href="https://linkedin.com/in/joel-seidel-258465164" target="_blank" rel="noopener" class="c-val">/in/joel-seidel-258465164</a>
+        </div>
+        <div class="c-card">
+          <p class="c-label">github</p>
+          <a href="https://github.com/joeldseidel" target="_blank" rel="noopener" class="c-val">joeldseidel</a>
+        </div>
+      </div>
+
+      <!--
+        CONTACT FORM — powered by Formspree (https://formspree.io)
+        Setup (free, takes 2 minutes):
+          1. Create an account at formspree.io
+          2. Click "New Form", name it "joelseidel.com contact"
+          3. Copy the form endpoint ID (looks like: xpwzabcd)
+          4. Replace YOUR_FORM_ID below with that ID
+          5. Verify your email when Formspree sends you a confirmation
+      -->
+      <div class="form-wrap">
+        <p class="form-cmd">$ send-message</p>
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="f-row">
+            <span class="f-flag">--name</span>
+            <input class="f-input" type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div class="f-row">
+            <span class="f-flag">--email</span>
+            <input class="f-input" type="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="f-row top">
+            <span class="f-flag">--msg</span>
+            <textarea class="f-area" name="message" placeholder="Say something..." required></textarea>
+          </div>
+          <div class="f-submit">
+            <button type="submit" class="btn-green">&gt;&nbsp;send</button>
+          </div>
+        </form>
+        <p id="form-ok">Message sent. I&rsquo;ll be in touch.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+  <div class="footer-inner">
+    <span class="foot-prompt">
+      <span class="g">joel@mbp</span><span class="d">:~$</span>&nbsp;<span class="foot-cur"></span>
+    </span>
+    <span class="foot-copy">Joel Seidel &copy; 2026</span>
+  </div>
+
+  <!-- ── SCRIPTS ───────────────────────────────────────────────────────────── -->
+  <script>
+  // ── Typing animation ──────────────────────────────────────────────────────
+  (function () {
+    var tc  = document.getElementById('tc');
+    var csr = document.getElementById('term-cursor');
+    var si = 0, ci = 0, cel = null;
+
+    var steps = [
+      { t: 'p', v: 'whoami' },
+      { t: 'o', v: 'Joel Seidel', c: '#E6EDF3', b: true, sp: 14 },
+      { t: 'e' },
+      { t: 'p', v: 'cat tagline.txt' },
+      { t: 'o', v: 'Technical enough to build it.',  c: '#C9D1D9', sp: 15 },
+      { t: 'o', v: 'Experienced enough to ship it.', c: '#C9D1D9', sp: 15 },
+      { t: 'e' },
+      { t: 'p', v: 'cat skills.json' },
+      { t: 'o', v: '{', c: '#F0F6FC', sp: 3 },
+      { t: 'o', v: '  "management":     ["Project delivery", "Portfolio mgmt", "Agile / Scrum"],',    c: '#8B949E', sp: 3 },
+      { t: 'o', v: '  "engineering":    ["Java", "JavaScript (React / Node.js)", "SQL"],',             c: '#3FB950', sp: 3 },
+      { t: 'o', v: '  "platforms":      ["Jira", "Confluence", "AWS", "MS Project"],',                c: '#58A6FF', sp: 3 },
+      { t: 'o', v: '  "domains":        ["Financial Reference Data", "Tech Consulting", "AI / ML"],', c: '#E3B341', sp: 3 },
+      { t: 'o', v: '  "certifications": ["SAFe 5 Scrum Master", "AWS Solutions Architect (2021\u20132025)", "PMP (in progress)"]', c: '#8B949E', sp: 3 },
+      { t: 'o', v: '}', c: '#F0F6FC', sp: 3 },
+    ];
+
+    function row(html) {
+      var d = document.createElement('div');
+      d.style.lineHeight = '1.85';
+      if (html) d.innerHTML = html;
+      tc.appendChild(d);
+      return d;
+    }
+
+    function tick() {
+      if (si >= steps.length) {
+        csr.classList.add('on');
+        return;
+      }
+      var s = steps[si];
+
+      if (s.t === 'e') {
+        row(''); si++; ci = 0;
+        setTimeout(tick, 90);
+        return;
+      }
+
+      if (s.t === 'p') {
+        if (ci === 0) {
+          var r = row('<span style="color:#4ADE80">joel@mbp</span><span style="color:#484F58">:~$</span>\u00a0');
+          cel = document.createElement('span');
+          r.appendChild(cel);
+        }
+        cel.textContent = s.v.slice(0, ci);
+        ci++;
+        if (ci > s.v.length) { si++; ci = 0; setTimeout(tick, 440); }
+        else setTimeout(tick, 64);
+        return;
+      }
+
+      if (s.t === 'o') {
+        if (ci === 0) {
+          cel = row('');
+          cel.style.color = s.c || '#C9D1D9';
+          if (s.b) cel.style.fontWeight = 'bold';
+        }
+        cel.textContent = s.v.slice(0, ci);
+        ci++;
+        var sp = s.sp || 14;
+        if (ci > s.v.length) { si++; ci = 0; setTimeout(tick, sp < 10 ? 55 : 180); }
+        else setTimeout(tick, sp);
+        return;
+      }
+    }
+
+    setTimeout(tick, 650);
+  }());
+
+  // ── Contact form (Formspree, AJAX with fallback) ──────────────────────────
+  (function () {
+    var form = document.getElementById('contact-form');
+    var ok   = document.getElementById('form-ok');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = '> sending...';
+      btn.style.opacity = '0.7';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          form.style.display = 'none';
+          ok.style.display   = 'block';
+        } else {
+          btn.textContent    = '> send';
+          btn.style.opacity  = '1';
+          alert('Something went wrong. Please email me directly at me@joelseidel.com.');
+        }
+      }).catch(function () {
+        form.submit(); // graceful fallback: standard POST redirect
+      });
+    });
+  }());
+
+  // ── Active nav link highlight on scroll ───────────────────────────────────
+  (function () {
+    var ids   = ['about', 'experience', 'projects', 'contact'];
+    var links = {};
+    ids.forEach(function (id) {
+      links[id] = document.querySelector('.nav-links a[href="#' + id + '"]');
+    });
+
+    function update() {
+      var y = window.scrollY + 100;
+      var cur = '';
+      ids.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top + window.scrollY <= y) cur = id;
+      });
+      ids.forEach(function (id) {
+        if (links[id]) links[id].classList.toggle('active', id === cur);
+      });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }());
+  </script>
+
+</body>
+</html>
